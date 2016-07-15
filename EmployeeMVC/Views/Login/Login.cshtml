@@ -1,0 +1,53 @@
+﻿@model EmployeeMVC.Models.LoginModels
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <h2>
+        User Login
+    </h2>
+    <h3>@ViewBag.Message</h3>
+
+    @using (Html.BeginForm())
+    {
+        <table width="100%">
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(a => a.email)
+                    @Html.ValidationMessageFor(a => a.email)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.password)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(a => a.password)
+                    @Html.ValidationMessageFor(a => a.password)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="Submit1" type="submit" value="submit" />
+                </td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
